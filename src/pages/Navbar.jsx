@@ -1,16 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../components/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Function to toggle navbar
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Function to handle scroll event
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  // Add scroll event listener when component mounts
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white shadow-lg">
+    <nav
+      className={`bg-white shadow-lg fixed top-0 w-full transition-all duration-300 ${
+        isScrolled ? "bg-opacity-90" : "bg-opacity-100"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div>
@@ -55,7 +79,7 @@ const Navbar = () => {
           <div className="flex flex-col items-center">
             <Link
               to="/contact"
-              className="py-3 text-gray-600 hover:text-gray-800"
+              className="py-3 text-blue-600 hover:underline transition delay-300"
             >
               Contact
             </Link>
