@@ -5,7 +5,7 @@ const Extra = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center ">
       <div className="max-w-4xl w-full">
-        <h2 className="text-center mb-8 font-bold text-lg md:text-2xl leading-8 ">
+        <h2 className="text-center mb-8 font-bold text-xl md:text-4xl leading-8 ">
           Real Estate-Focused Digital Mastery
         </h2>
         <div className="flex flex-col lg:flex-row items-center lg:items-start">
@@ -17,7 +17,7 @@ const Extra = () => {
             />
           </div>
           <div className="lg:w-1/2 flex flex-col md:items-start items-center flex-wrap">
-            <h2 className="text-center lg:text-left mb-4 text-sm md:text-2xl font-bold ">
+            <h2 className="text-center lg:text-left mb-4 text-lg md:text-2xl font-bold ">
               Unlock the Potential of Digital Real Estate Excellence
             </h2>
             <h5 className="text-center lg:text-left  font-signature font-normal text-sm md:text-base ">

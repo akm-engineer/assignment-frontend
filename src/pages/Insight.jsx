@@ -10,10 +10,10 @@ const Insight = () => {
   return (
     <div className="py-8">
       <div className="container mx-auto text-center">
-        <h1 className="text-xl md:text-3xl font-bold mb-4">
+        <h1 className="text-xl md:text-5xl font-bold mb-4">
           Navigating Real Estate's Digital Landscape
         </h1>
-        <h4 className="text-sm md:text-lg font-signature">
+        <h4 className="text-sm md:text-2xl font-signature mb-4">
           Insights for Real Estate Marketing Advantage
         </h4>
       </div>
@@ -50,7 +50,7 @@ const Insight = () => {
           <img
             src={insightRight}
             alt="Right"
-            className="w-full h-auto md:h-[760px] object-cover"
+            className="w-full h-auto md:h-[600px] object-cover rounded-3xl p-2 md:p-0"
           />
         </div>
       </div>
